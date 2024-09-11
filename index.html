@@ -3,9 +3,199 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="root.css" />
   </head>
   <body>
-    <div>hello World</div>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Education & Experience</li>
+          <li class="navbar__menu__item">Skill</li>
+          <li class="navbar__menu__item">Project</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="about">
+      <div class="about__container">
+        <div class="idPhoto">
+          <img src="./img/증명사진.jpg" alt="" />
+        </div>
+        <div class="about__introduce">
+          새로운 것을 배우고 <br />
+          도전하는 것을 즐기는 예비 개발자
+          <br />
+          <span class="about__introduce__name">김용현</span>입니다.
+        </div>
+        <div class="about__contact">
+          <p>Contact</p>
+          <span>Ph. 01092106163</span>
+          <span>E. lovelove4695@naver.com</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="edu__exp divider">
+      <p class="education__title">Education & Experience</p>
+      <div class="totalcontainer">
+        <div class="edu__container">
+          <div class="education__icon">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div class="education__info">
+            <p>코리아IT 아카데미(인천) 응용SW개발자 양성(국비) 과정 수료</p>
+            <span>2024. 04 - 2024.08</span>
+          </div>
+          <div class="education__info">
+            <p>코리아IT 아카데미(인천) Java기반 웹앱개발 과정 수료</p>
+            <span>2024.02 - 2024.07</span>
+          </div>
+          <div class="education__info">
+            <p>우송정보대학 외식조리과</p>
+            <span>2010.03~2015.03</span>
+          </div>
+          <div class="education__info">
+            <p>한국조리과학 고등학교</p>
+            <span>2007.03~2010.02</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="education__icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <div class="education__info">
+            <p>호주 타일회사 재직</p>
+            <span>2017.03 - 2022.12</span>
+          </div>
+          <div class="education__info">
+            <p>H.A.N (밀키트 스타트업회사) 메뉴개발팀 재직</p>
+            <span>2016.04 - 2016.07</span>
+          </div>
+          <div class="education__info">
+            <p>서울가든호텔 재직</p>
+            <span> 2014.11 - 2016.03</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills divider">
+      <div class="skill__container">
+        <div class="skill__title">
+          <p>Languages</p>
+          <div class="front__item">
+            <div class="skill">
+              <div class="skill__icon"><img src="./img/html.png" alt="" /></div>
+              <div>HTML/CSS</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__icon"><img src="./img/js.png" alt="" /></div>
+              <div>JavaScript</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon"><img src="./img/ts.png" alt="" /></div>
+              <div>TypeScript</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon"><img src="./img/java.png" alt="" /></div>
+              <div>Java</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/mysql.png" alt="" />
+              </div>
+              <div>MySQL</div>
+            </div>
+          </div>
+        </div>
+        <div class="skill__title">
+          <p>Tools</p>
+          <div class="front__item">
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/vscode.png" alt="" />
+              </div>
+              <div>VSCODE</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/react.png" alt="" />
+              </div>
+              <div>React</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/intellij.png" alt="" />
+              </div>
+              <div>IntelliJ</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon"><img src="./img/boot.png" alt="" /></div>
+              <div>Spring Boot</div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/git.png" alt="" />
+              </div>
+              <div>Git</div>
+            </div>
+          </div>
+        </div>
+        <div class="skill__title">
+          <p>TeamSpace</p>
+          <div class="front__item">
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/notion.png" alt="" />
+              </div>
+              <div>Notion</div>
+            </div>
+            <div class="skill">
+              <div class="skill__icon">
+                <img src="./img/github.png" alt="" />
+              </div>
+              <div>Github</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="divider project">
+      <div class="project__title">
+        <p>Project</p>
+      </div>
+      <div class="project__container">
+        <div class="project__item">
+          <div class="project__item__title">MiniBlog</div>
+          <a href="https://youtu.be/nyQjrdhCEzM" class="project__img"
+            ><img src="./img/bechef logo.png" alt="" />
+            <div class="project__mask"><p>클릭하세요</p></div>
+          </a>
+        </div>
+        <div class="project__item">
+          <div class="project__item__title">MiniBlog</div>
+          <a
+            href="https://www.notion.so/Portfolio-48d8dc6928e44ec18c7cb4330306ca86?p=0a223199e5574e90a62a7d4e9aa09f40&pm=s"
+            class="project__img"
+            ><img src="miniblog logo.jpg" alt="" />
+            <div class="project__mask"><p>클릭하세요</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="footer"></section>
   </body>
 </html>
