@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>yonghyun Portfolio</title>
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!--==================== fontAwesome CDN ====================-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,190 +19,499 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="root.css" />
+
+    <!--==================== root CSS ====================-->
+    <link rel="stylesheet" href="./css/root.css" />
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Education & Experience</li>
-          <li class="navbar__menu__item">Skill</li>
-          <li class="navbar__menu__item">Project</li>
-        </ul>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="" class="nav__logo">Yonghyun</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="fa-solid fa-house nav__icon"></i>Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="fa-regular fa-user nav__icon"></i>About
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">
+                <i class="fa-solid fa-briefcase nav__icon"></i>Experience
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">
+                <i class="fa-solid fa-inbox nav__icon"></i>Portfolio
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="fa-regular fa-message nav__icon"></i>Contact
+              </a>
+            </li>
+          </ul>
+          <i class="fa-solid fa-x nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fa-solid fa-rectangle-list"></i>
+          </div>
+        </div>
       </nav>
     </header>
-    <section class="about">
-      <div class="about__container">
-        <div class="idPhoto">
-          <img src="./img/증명사진.jpg" alt="" />
-        </div>
-        <div class="about__introduce">
-          새로운 것을 배우고 <br />
-          도전하는 것을 즐기는 예비 개발자
-          <br />
-          <span class="about__introduce__name">김용현</span>입니다.
-        </div>
-        <div class="about__contact">
-          <p>Contact</p>
-          <span>Ph. 01092106163</span>
-          <span>E. lovelove4695@naver.com</span>
-        </div>
-      </div>
-    </section>
 
-    <section class="edu__exp divider">
-      <p class="education__title">Education & Experience</p>
-      <div class="totalcontainer">
-        <div class="edu__container">
-          <div class="education__icon">
-            <i class="fa-solid fa-school"></i>
-          </div>
-          <div class="education__info">
-            <p>코리아IT 아카데미(인천) 응용SW개발자 양성(국비) 과정 수료</p>
-            <span>2024. 04 - 2024.08</span>
-          </div>
-          <div class="education__info">
-            <p>코리아IT 아카데미(인천) Java기반 웹앱개발 과정 수료</p>
-            <span>2024.02 - 2024.07</span>
-          </div>
-          <div class="education__info">
-            <p>우송정보대학 외식조리과</p>
-            <span>2010.03~2015.03</span>
-          </div>
-          <div class="education__info">
-            <p>한국조리과학 고등학교</p>
-            <span>2007.03~2010.02</span>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <!-- 나에게 맞는 아이콘이랑 주소 넣기 -->
+              <a href="#" target="_blank" class="home__social-icon">
+                <i class="fa-solid fa-link"></i>
+              </a>
+              <a href="#" target="_blank" class="home__social-icon"
+                ><i class="fa-solid fa-basketball"></i
+              ></a>
+              <a href="#" target="_blank" class="home__social-icon"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <div class="home__img">
+              <svg
+                class="home__blob"
+                viewBox="0 0 200 187"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                  <image
+                    class="home__blob-img"
+                    x="12"
+                    y="18"
+                    href="img/증명사진.jpg"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="home__data">
+              <h1 class="home__title">안녕하세요. 저는 김용현입니다.</h1>
+              <h3 class="home__subtitle">
+                ?????(서브타이틀 뭐라할지 모르겟습니다..)
+              </h3>
+              <p class="home__description">
+                새로운 것을 배우고 <br />
+                도전하는 것을 즐기는 예비 개발자입니다
+              </p>
+              <a download="" href="이력서파일넣기" class="button button--flex">
+                Download resume
+                <i class="fa-solid fa-download button__icon"></i>
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div>
-          <div class="education__icon">
-            <i class="fa-solid fa-briefcase"></i>
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
+        <div class="about__container container grid">
+          <img src="./img/증명사진.jpg" alt="" class="about__img" />
+          <div class="about__data">
+            <p class="about__description"></p>
+            <div>
+              <h2 class="section__title">Skills & Tools</h2>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Frontend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>VSCODE</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>TypeScript</span>
+                  <span>React</span>
+                </div>
+              </div>
+              <hr />
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Backend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Java</span>
+                  <span>SpringBoot</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <hr />
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>DB</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Oracle</span>
+                  <span>MySQL</span>
+                  <span>Dbeaver</span>
+                </div>
+              </div>
+              <hr />
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>TeamSpace</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Git</span>
+                  <span>Github</span>
+                  <span>Notion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== QUALIFICATION ====================-->
+      <section class="qualification section" id="experience">
+        <h2 class="section__title">Experience</h2>
+        <span class="section__subtitle">My personal journey</span>
+
+        <div class="qualification__container container">
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#education"
+            >
+              <i class="fa-solid fa-graduation-cap qualification__icon"></i>
+              Education
+            </div>
+            <div class="qualification__button button--flex" data-target="#work">
+              <i class="fa-solid fa-briefcase qualification__icon"></i>
+              Work
+            </div>
           </div>
 
-          <div class="education__info">
-            <p>호주 타일회사 재직</p>
-            <span>2017.03 - 2022.12</span>
-          </div>
-          <div class="education__info">
-            <p>H.A.N (밀키트 스타트업회사) 메뉴개발팀 재직</p>
-            <span>2016.04 - 2016.07</span>
-          </div>
-          <div class="education__info">
-            <p>서울가든호텔 재직</p>
-            <span> 2014.11 - 2016.03</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="skills divider">
-      <div class="skill__container">
-        <div class="skill__title">
-          <p>Languages</p>
-          <div class="front__item">
-            <div class="skill">
-              <div class="skill__icon"><img src="./img/html.png" alt="" /></div>
-              <div>HTML/CSS</div>
-            </div>
+          <div class="qualification__sections">
+            <!--==================== QUALIFICATION CONTENT 1 ====================-->
+            <div
+              class="qualification__content qualification__active"
+              data-content
+              id="education"
+            >
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Computer Enginner</h3>
+                  <span class="qualification__subtitle">Peru - University</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2009 - 2014
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
 
-            <div class="skill">
-              <div class="skill__icon"><img src="./img/js.png" alt="" /></div>
-              <div>JavaScript</div>
-            </div>
-            <div class="skill">
-              <div class="skill__icon"><img src="./img/ts.png" alt="" /></div>
-              <div>TypeScript</div>
-            </div>
-            <div class="skill">
-              <div class="skill__icon"><img src="./img/java.png" alt="" /></div>
-              <div>Java</div>
-            </div>
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/mysql.png" alt="" />
-              </div>
-              <div>MySQL</div>
-            </div>
-          </div>
-        </div>
-        <div class="skill__title">
-          <p>Tools</p>
-          <div class="front__item">
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/vscode.png" alt="" />
-              </div>
-              <div>VSCODE</div>
-            </div>
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/react.png" alt="" />
-              </div>
-              <div>React</div>
-            </div>
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/intellij.png" alt="" />
-              </div>
-              <div>IntelliJ</div>
-            </div>
-            <div class="skill">
-              <div class="skill__icon"><img src="./img/boot.png" alt="" /></div>
-              <div>Spring Boot</div>
-            </div>
+              <!--==================== QUALIFICATION 2 ====================-->
+              <div class="qualification__data">
+                <div></div>
 
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/git.png" alt="" />
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Web Design</h3>
+                  <span class="qualification__subtitle">Spain - Institute</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2014 - 2017
+                  </div>
+                </div>
               </div>
-              <div>Git</div>
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Web Development</h3>
+                  <span class="qualification__subtitle">Peru - Institute</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2017 - 2019
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 4 ====================-->
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Master in Ui/Ux</h3>
+                  <span class="qualification__subtitle">Peru - Institute</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2019 - 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--==================== QUALIFICATION CONTENT 2 ====================-->
+            <div class="qualification__content" data-content id="work">
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Software Enginner</h3>
+                  <span class="qualification__subtitle">Microsoft - Peru</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2016 - 2018
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 2 ====================-->
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Frontend Developer</h3>
+                  <span class="qualification__subtitle">Apple Inc - Spain</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2018 - 2020
+                  </div>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Ui Designer</h3>
+                  <span class="qualification__subtitle">Figma - Spain</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2017 - 2019
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 4 ====================-->
+              <!-- <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"> </span>
+                  // <span class="qualification__line"></span>  
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Master in Ui/Ux</h3>
+                  <span class="qualification__subtitle">Peru - Institute</span>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2019 - 2021
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
-        <div class="skill__title">
-          <p>TeamSpace</p>
-          <div class="front__item">
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/notion.png" alt="" />
+      </section>
+
+      <!--==================== PORTFOLIO ====================-->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <span class="section__subtitle">Most recent work</span>
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== PORTFOLIO 1 ====================-->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="./img/bechef logo.png" alt="" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Bechef</h3>
+                <p class="portfolio__description">
+                  사용자가 주변 밀키트 판매점의 위치와 재고를 실시간으로
+                  확인가능한 웹사이트 입니다. <br />개인의 경험을 리뷰와 찜
+                  기능으로 기록, 공유 할 수 있습니다.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://youtu.be/nyQjrdhCEzM"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Video
+                  <i class="fa-solid fa-arrow-right button__icon"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/yonghyuny/bechefFront/blob/main/README.md"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Read Me
+                  <i class="fa-solid fa-arrow-right button__icon"></i>
+                </a>
               </div>
-              <div>Notion</div>
             </div>
-            <div class="skill">
-              <div class="skill__icon">
-                <img src="./img/github.png" alt="" />
+            <!--==================== PORTFOLIO 2 ====================-->
+            <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./img/miniblog logo.jpg"
+                alt=""
+                class="portfolio__img"
+              />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Mini Blog</h3>
+                <p class="portfolio__description">
+                  사용자들이 개인 블로그를 생성하고 게시글을 작성, 공유할 수
+                  있는 플랫폼 개발
+                </p>
+                <a
+                  target="_blank"
+                  href="https://youtu.be/-d7xRbFlzeo"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Video
+                  <i class="fa-solid fa-arrow-right button__icon"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/yonghyuny/MiniBlog/blob/main/README.md"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Read Me
+                  <i class="fa-solid fa-arrow-right button__icon"></i>
+                </a>
               </div>
-              <div>Github</div>
+            </div>
+            <!--==================== PORTFOLIO 3 ====================-->
+            <!-- <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./img/miniblog logo.jpg"
+                alt=""
+                class="portfolio__img"
+              />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Modern Website</h3>
+                <p class="portfolio__description">미니블로그 짤막하게 설명</p>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Demo
+                  <i class="fa-solid fa-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Add Arrows -->
+
+          <div class="swiper-button-next">
+            <i class="fa-solid fa-chevron-right swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="fa-solid fa-chevron-left swiper-portfolio-icon"></i>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!--==================== CONTACT ME ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get in touch</span>
+
+        <div class="contact__container container">
+          <div class="contact__content">
+            <div class="contact__infomation">
+              <i class="fa-solid fa-mobile contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Call Me</h3>
+                <span class="contact__subtitle">010-9210-6163</span>
+              </div>
+            </div>
+            <div class="contact__infomation">
+              <i class="fa-regular fa-envelope contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle">lovelove4695@naver.com</span>
+              </div>
+            </div>
+            <div class="contact__infomation">
+              <i class="fa-solid fa-location-dot contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle">Incheon</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="divider project">
-      <div class="project__title">
-        <p>Project</p>
-      </div>
-      <div class="project__container">
-        <div class="project__item">
-          <div class="project__item__title">MiniBlog</div>
-          <a href="https://youtu.be/nyQjrdhCEzM" class="project__img"
-            ><img src="./img/bechef logo.png" alt="" />
-            <div class="project__mask"><p>클릭하세요</p></div>
-          </a>
-        </div>
-        <div class="project__item">
-          <div class="project__item__title">MiniBlog</div>
-          <a
-            href="https://www.notion.so/Portfolio-48d8dc6928e44ec18c7cb4330306ca86?p=0a223199e5574e90a62a7d4e9aa09f40&pm=s"
-            class="project__img"
-            ><img src="miniblog logo.jpg" alt="" />
-            <div class="project__mask"><p>클릭하세요</p></div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="footer"></section>
+      </section>
+    </main>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scrollup__icon"></i>
+    </a>
   </body>
 </html>
