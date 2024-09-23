@@ -514,7 +514,26 @@ img {
 /*==================== CONTACT ME ====================*/
 .contact__container {
   row-gap: 3rem;
+  position: relative;
+  min-height: 500px; /* 최소 높이 설정 */
+  padding: 2rem; /* 내부 여백 추가 */
 }
+
+.contact__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/사진2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: 1;
+}
+
 .contact {
   margin-bottom: 150px;
 }
@@ -522,11 +541,16 @@ img {
 .contact__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* 컨텐츠를 배경 위에 표시 */
 }
 
 .contact__information {
   display: flex;
   margin-bottom: var(--mb-2);
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .contact__icon {
@@ -615,6 +639,17 @@ img {
   .qualification__data {
     gap: 0.5rem;
   }
+
+  .contact__information {
+    padding: 0.75rem;
+  }
+
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+  }
 }
 /* For medium devices */
 @media screen and (min-width: 568px) {
@@ -641,6 +676,18 @@ img {
     grid-template-columns: 0.6fr;
     justify-content: center;
   }
+
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .contact__information {
+    width: calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -665,8 +712,7 @@ img {
     bottom: initial;
   }
   .header,
-  .main,
-  .footer__container {
+  .main {
     padding: 0 1rem;
   }
 
@@ -749,6 +795,20 @@ img {
   .portfolio__content {
     align-items: center;
   }
+
+  .contact__container {
+    padding: 3rem;
+  }
+
+  .contact__content {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .contact__information {
+    width: calc(33.333% - 1rem);
+    text-align: center;
+  }
 }
 
 /* For large devices */
@@ -765,6 +825,14 @@ img {
 
   .home__social {
     transform: translateX(-6rem);
+  }
+
+  .contact__container {
+    padding: 4rem;
+  }
+
+  .contact__information {
+    max-width: none;
   }
 
   .services__container {
